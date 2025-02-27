@@ -1,0 +1,112 @@
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  font-size: 14px;
+  font-family: "Montserrat", serif;
+  display: grid;
+  place-items: center;
+  background-color: hsl(30, 38%, 92%);
+}
+
+img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.product-card__description p:last-of-type {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.product-card {
+  width: 600px;
+  height: 450px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 450px;
+  border-radius: 10px;
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+}
+.product-card__img {
+  background-size: cover;
+  background-position: center;
+  background-image: url("../images/image-product-desktop.jpg");
+}
+.product-card__description {
+  padding: 30px;
+  background-color: hsl(0, 0%, 100%);
+}
+.product-card__description > span {
+  display: block;
+  font-size: 16px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: hsl(228, 12%, 48%);
+}
+.product-card__description h3 {
+  margin-top: 20px;
+  color: hsl(212, 21%, 14%);
+  font-size: 32px;
+  font-family: "Fraunces";
+  line-height: 1.2;
+}
+.product-card__description p:first-of-type {
+  margin-top: 20px;
+  line-height: 1.5;
+}
+.product-card__description p:last-of-type {
+  margin-top: 20px;
+}
+.product-card__description p:last-of-type span:first-child {
+  margin-right: 10px;
+  font-family: "Fraunces";
+  font-size: 24px;
+  font-weight: 700;
+  color: hsl(158, 36%, 37%);
+}
+.product-card__description p:last-of-type span:last-child {
+  text-decoration: line-through;
+  color: hsl(228, 12%, 48%);
+}
+.product-card__description a {
+  margin-top: 30px;
+  display: block;
+  width: 100%;
+  height: 40px;
+  background-color: hsl(158, 36%, 37%);
+  color: hsl(0, 0%, 100%);
+  font-weight: 500;
+  line-height: 40px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 6px;
+}
+.product-card__description a:hover {
+  background-color: hsl(158, 42%, 18%);
+}
+
+@media screen and (max-width: 700px) {
+  .product-card {
+    width: 90%;
+    height: auto;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
+  .product-card__img {
+    width: 100%;
+    height: 200px;
+    background-image: url("../images/image-product-mobile.jpg");
+  }
+}/*# sourceMappingURL=style.css.map */

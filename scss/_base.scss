@@ -1,0 +1,32 @@
+$primary-green-500: hsl(158, 36%, 37%);
+$primary-green-700: hsl(158, 42%, 18%);
+
+$neutral-black: hsl(212, 21%, 14%);
+$neutral-grey: hsl(228, 12%, 48%);
+$neutral-cream: hsl(30, 38%, 92%);
+$neutral-white: hsl(0, 0%, 100%);
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  font-size: 14px;
+  font-family: 'Montserrat', serif;
+  // 将页面内容居中
+  display: grid;
+  place-items: center;
+  background-color: $neutral-cream;
+}
+
+img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+}

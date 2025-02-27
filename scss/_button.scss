@@ -1,0 +1,14 @@
+@use 'base' as base;
+
+@mixin button($theme: base.$primary-green-500) {
+  display: block;
+  width: 100%;
+  height: 40px;
+  background-color: $theme;
+  color: base.$neutral-white;
+  font-weight: 500;
+  line-height: 40px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 6px;
+}

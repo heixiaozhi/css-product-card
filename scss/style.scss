@@ -1,0 +1,79 @@
+@use 'base' as base;
+@use 'layout' as *;
+@use 'button' as *;
+
+.product-card {
+  width: 600px;
+  height: 450px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 450px;
+  border-radius: 10px;
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);
+  // 防止子容器覆盖了border-radius
+  overflow: hidden;
+
+  &__img {
+    background-size: cover;
+    background-position: center;
+    background-image: url('../images/image-product-desktop.jpg');
+  }
+
+  &__description {
+    padding: 30px;
+    background-color: base.$neutral-white;
+    // border-top-right-radius: 10px;
+    // border-bottom-right-radius: 10px;
+
+    // 使用子类选择器
+    > span {
+      display: block;
+      font-size: 16px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: base.$neutral-grey;
+    }
+
+    h3 {
+      margin-top: 20px;
+      color: base.$neutral-black;
+      font-size: 32px;
+      font-family: 'Fraunces';
+      line-height: 1.2;
+    }
+
+    p:first-of-type {
+      margin-top: 20px;
+      line-height: 1.5;
+    }
+
+    p:last-of-type {
+      margin-top: 20px;
+      @extend %flex-center;
+
+      span:first-child {
+        margin-right: 10px;
+        font-family: 'Fraunces';
+        font-size: 24px;
+        font-weight: 700;
+        color: base.$primary-green-500;
+      }
+
+      span:last-child {
+        text-decoration: line-through;
+        color: base.$neutral-grey;
+      }
+    }
+
+    a {
+      margin-top: 30px;
+      @include button;
+    }
+
+    a:hover {
+      background-color: base.$primary-green-700;
+    }
+  }
+}
+
+@import 'mobile';

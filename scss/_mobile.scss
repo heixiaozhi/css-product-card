@@ -1,0 +1,14 @@
+@media screen and (max-width: 700px) {
+  .product-card {
+    width: 90%;
+    height: auto;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+
+    &__img {
+      width: 100%;
+      height: 200px;
+      background-image: url('../images/image-product-mobile.jpg');
+    }
+  }
+}
